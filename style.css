@@ -813,7 +813,7 @@ body.sidebar-open .mobile-overlay { opacity: 1; visibility: visible; }
   .qualifications .content .title span,
   .skills .content .title span,
   .services .content .title span {
-    width: 60%;
+    width: 100%;
     justify-self: center;
   }
 }
@@ -967,3 +967,4 @@ body.sidebar-open .mobile-overlay { opacity: 1; visibility: visible; }
     }
   }
 }
+
