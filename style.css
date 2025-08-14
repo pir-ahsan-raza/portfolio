@@ -799,7 +799,7 @@ body.sidebar-open .mobile-overlay { opacity: 1; visibility: visible; }
   .home-content .right { order: 2; margin-top: 6px; display:flex; justify-content:center; }
 
   .text { width: 100%; max-width: 560px; margin: 0 auto; padding: 0 12px; }
-  .text-one { font-size: 25px; }
+  .text-one { font-size: 23px; }
   .text-two { font-size: 30px; }
   .text-three { font-size: 25px; }
 
@@ -967,5 +967,6 @@ body.sidebar-open .mobile-overlay { opacity: 1; visibility: visible; }
     }
   }
 }
+
 
 
