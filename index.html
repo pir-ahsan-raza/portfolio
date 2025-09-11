@@ -9,151 +9,157 @@
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-
     <!-- <link rel="shortcut icon" href="IMG/102-CRT.png"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <script src="script.js" defer></script>
-    <!-- navigation menu -->
-    <nav>
-        <div class="navbar">
-            <div class="logo">
-                <a href="#home">Portfolio<span style="color:#fff">.</span></a>
-            </div>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li class="has-social">
-                    <a href="#foot" class="nav-contact">Contact</a>
-
-                    <div class="nav-social" aria-hidden="true">
-                        <a href="https://github.com/pir-ahsan-raza" target="_blank" rel="noopener noreferrer"
-                            title="GitHub">
-                            <i class="fab fa-github"></i>GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/in/pir-ahsan-raza" target="_blank" rel="noopener noreferrer"
-                            title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>LinkedIn
-                        </a>
-                        <a href="https://www.freecodecamp.org/pir-ahsan-raza" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-free-code-camp"></i> freeCodeCamp
-                        </a>
-                    </div>
-                </li>
-
-            </ul>
+    <div id="loader">
+        <div class="boot-text">Booting...</div>
+        <div class="progress">
+            <div class="bar"></div>
         </div>
-    </nav>
+        <div class="status">Nearly There...</div>
+    </div>
+    <div id="main-content" style="display:none;">
 
-    <!-- home section -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <div class="left">
-                <div class="text">
-                    <div class="text-one typewriter" data-text="Hi, I'm Pir Ahsan Raza" data-speed="70"></div>
-                    <div class="text-two typewriter" data-text="Software Engineer" data-speed="70"></div>
-                    <div class="text-three typewriter" data-text="Islamabad, Pakistan" data-speed="70"></div>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#home" class="logo">Pir Ahsan Raza</a>
                 </div>
-            </div>
-            <div class="right">
-                <div class="profile-wrapper">
-                    <img src="IMG/101NOBG.png" alt="" class="profile base">
-                    <img src="IMG/102-CRT.png" alt="" class="profile crt">
-                    <div class="scanline"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+                
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li class="has-social">
+                        <a href="#foot" class="nav-contact">Contact</a>
 
-    <!-- about section -->
-    <section class="about" id="about">
-        <div class="content">
-            <div class="title"><span>About Me</span></div>
-            <div class="about-details">
+                        <div class="nav-social" aria-hidden="true">
+                            <a href="https://github.com/pir-ahsan-raza" target="_blank" rel="noopener noreferrer"
+                                title="GitHub">
+                                <i class="fab fa-github"></i>GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/pir-ahsan-raza" target="_blank"
+                                rel="noopener noreferrer" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>LinkedIn
+                            </a>
+                            <a href="https://x.com/Pir_Ahsan_Raza" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-x-twitter"></i> X/twitter
+                            </a>
+                        </div>
+                    </li>
 
+                </ul>
+            </div>
+        </nav>
+
+        <!-- home section -->
+        <section class="home" id="home">
+            <div class="home-content">
                 <div class="left">
-                    <img src="IMG/102-CRT.png" alt="">
+                    <div class="text">
+                        <div class="text-one typewriter" data-text="Hi, I'm Pir Ahsan Raza" data-speed="70"></div>
+                        <div class="text-two typewriter" data-text="Software Engineer" data-speed="70"></div>
+                        <div class="text-three typewriter" data-text="Islamabad, Pakistan" data-speed="70"></div>
+                    </div>
                 </div>
-
                 <div class="right">
-                    <div class="topic text-one">Programming & Web Design</div>
-                    <p class="abt-text">
-                        I build beautiful, art-inspired websites that feel different — mixing thoughtful design with
-                        clean code to create playful, useful experiences. I love trying new ideas and learning tools
-                        that help bring those ideas to life
-                    </p>
-<!--                     <div class="button">
+                    <div class="profile-wrapper">
+                        <img src="IMG/101NOBG.png" alt="" class="profile base">
+                        <img src="IMG/102-CRT.png" alt="" class="profile crt">
+                        <div class="scanline"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about section -->
+        <section class="about" id="about">
+            <div class="content">
+                <div class="title"><span>About Me</span></div>
+                <div class="about-details">
+
+                    <div class="just-c">
+                        <div class="topic text-one">Exploring code, AI, and creativity</div>
+                        <p class="abt-text">
+                            I’m Pir Ahsan Raza, a software engineering student who loves diving into code and
+                            exploring the world of technology. Programming and AI fascinate me—not just the theory, but
+                            the
+                            endless possibilities of what can be created. Every new concept I learn pushes me to
+                            experiment,
+                            build, and figure things out by hand.<br><br>
+
+                            I enjoy taking on challenges, whether it’s solving problems in class projects or trying out
+                            tools I’ve never used before. My goal is to keep growing my skills and eventually turn the
+                            ideas
+                            in my head into projects that people can actually use.
+                        </p>
+                        <!-- <div class="button">
                         <a href="#cv.pdf" download="My_CV.pdf"><button class="box">Download CV</button></a>
                     </div> -->
-                </div>
+                    </div>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- qualifications -->
-    <section class="qualifications" id="qualifications">
-        <div class="content">
-            <div class="title"><span>Qualification</span></div>
-            <p class="qual-subtitle">
-                A record of my formal education, key milestones, and verified certifications<br>
-                — a concise view of my learning journey and achievements.</p>
-            <br><br>
+        <!-- qualifications -->
+        <section class="qualifications" id="qualifications">
+            <div class="content">
+                <div class="title"><span>Qualification</span></div>
+                <p class="qual-subtitle">A quick look at my education so far.</p>
+                <br><br>
 
-            <div class="timeline">
-                <div class="timeline-empty"></div>
+                <div class="timeline">
+                    <div class="timeline-empty"></div>
 
-                <div class="timeline-node">
-                    <div class="branch branch-right" aria-hidden="true"></div>
-                </div>
-
-                <div class="timeline-entry right">
-                    <div class="timeline-content">
-                        <span class="box-dot"><i class="fas fa-school"></i></span>
-
-                        <h4 class="right-h4">Matriculation</h4>
-                        <div class="timeline-date">2020</div>
-                        <p>Successfully completed Matriculation under BISE.</p>
+                    <div class="timeline-node">
+                        <div class="branch branch-right" aria-hidden="true"></div>
                     </div>
-                </div>
 
-                <div class="timeline-entry left">
-                    <div class="timeline-content">
-                        <span class="box-dot"><i class="fas fa-book-open"></i></span>
-
-                        <h4>Intermediate</h4>
-                        <div class="timeline-date">2023</div>
-                        <p>Successfully completed Intermediate under BISE.</p>
+                    <div class="timeline-entry right">
+                        <div class="timeline-content">
+                            <span class="box-dot"><i class="fas fa-school"></i></span>
+                            <h4 class="right-h4">Matriculation</h4>
+                            <div class="timeline-date">2020</div>
+                            <p>Successfully completed Matriculation under BISE.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="timeline-node">
-                    <div class="branch branch-left" aria-hidden="true"></div>
-                </div>
-
-                <div class="timeline-empty"></div>
-
-                <div class="timeline-empty"></div>
-
-                <div class="timeline-node">
-                    <div class="branch branch-right" aria-hidden="true"></div>
-                </div>
-
-                <div class="timeline-entry right">
-                    <div class="timeline-content">
-                        <span class="box-dot"><i class="fas fa-graduation-cap"></i></span>
-
-                        <h4 class="right-h4">Capital University of Science & Technology</h4>
-                        <div class="timeline-date">2024 - Present</div>
-                        <p>Currently pursuing a Software Engineering degree.</p>
+                    <div class="timeline-entry left">
+                        <div class="timeline-content">
+                            <span class="box-dot"><i class="fas fa-book-open"></i></span>
+                            <h4>Intermediate</h4>
+                            <div class="timeline-date">2023</div>
+                            <p>Successfully completed Intermediate under BISE.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="timeline-entry left">
+                    <div class="timeline-node">
+                        <div class="branch branch-left" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="timeline-empty"></div>
+
+                    <div class="timeline-empty"></div>
+
+                    <div class="timeline-node">
+                        <div class="branch branch-right" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="timeline-entry right">
+                        <div class="timeline-content">
+                            <span class="box-dot"><i class="fas fa-graduation-cap"></i></span>
+                            <h4 class="right-h4">Capital University of Science & Technology</h4>
+                            <div class="timeline-date">2024 - Present</div>
+                            <p>Currently pursuing a Software Engineering degree.</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="timeline-entry left">
                     <div class="timeline-content">
                         <span class="box-dot"><i class="fas fa-certificate"></i></span>
                         <h4>Responsive Web Design Certificate</h4>
@@ -162,190 +168,181 @@
                                 href="https://www.freecodecamp.org/certification/pir-ahsan-raza/responsive-web-design"
                                 target="_blank" rel="noopener noreferrer">View certificate</a></p>
                     </div>
-                </div>
-
-
-                <div class="timeline-node">
+                </div> -->
+                    <!-- <div class="timeline-node">
                     <div class="branch branch-left" aria-hidden="true"></div>
+                </div> -->
+                    <div class="timeline-empty"></div>
                 </div>
-
-                <div class="timeline-empty"></div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- skills -->
-    <section class="skills" id="skills">
-        <div class="content">
-            <div class="title"><span>My Skills</span></div>
-            <div class="skills-details">
+        <!-- skills -->
+        <section class="skills" id="skills">
+            <div class="content">
+                <div class="title"><span>My Skills</span></div>
+                <div class="skills-details">
 
-                <div class="box">
-                    <div class="icon"><i class="fa-brands fa-html5"></i></div>
-                    <div class="topic">HTML</div>
-                    <p>Semantic, accessible markup for responsive layouts. SEO-friendly structure.</p>
-                </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fa-brands fa-css"></i></div>
-                    <div class="topic">CSS</div>
-                    <p>Responsive styling with Grid & Flexbox. Micro-interactions & polished animations.</p>
-                </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fab fa-js"></i></div>
-                    <div class="topic">JavaScript</div>
-                    <p>Dynamic functionality and client-side interactions. Strong in ES6+ features.</p>
-                </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fab fa-php"></i></div>
-                    <div class="topic">PHP</div>
-                    <p>Server-side scripting for dynamic sites and form handling.</p>
-
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="devicon-cplusplus-plain"></i></div>
-                    <div class="topic">C++</div>
-                    <p>High-performance native apps. Systems programming and optimization focus.
-                    </p>
-
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="devicon-csharp-plain"></i></div>
-                    <div class="topic">C#</div>
-                    <p>Application and Unity game scripting. Gameplay logic & Physics.</p>
-
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="fab fa-python"></i></div>
-                    <div class="topic">Python</div>
-                    <p>Scripting & automation. Backend services and prototype ML workflows.</p>
-
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="fas fa-code-branch"></i></div>
-                    <div class="topic">Version Control</div>
-                    <p>Git workflows, branching strategies and PRs. Collaboration and release hygiene.</p>
-
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="fab fa-github"></i></div>
-                    <div class="topic">GitHub</div>
-                    <p>Repository hosting, CI & pull-request workflows.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- services -->
-    <section class="services" id="services">
-        <div class="content">
-            <div class="title"><span>My Services</span></div>
-            <div class="skills-details">
-
-                <div class="box">
-                    <div class="icon">
-                        <i class="fa-solid fa-layer-group"></i>
+                    <div class="box">
+                        <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                        <div class="topic">HTML</div>
+                        <p>Semantic, accessible markup for responsive layouts. SEO-friendly structure.</p>
                     </div>
-                    <div class="topic">Web Development</div>
-                    <p>Build responsive, accessible websites with clean, production-ready HTML/CSS/JS.</p>
-                </div>
 
-                <div class="box">
-                    <div class="icon"><i class="devicon-cplusplus-plain"></i></div>
-                    <div class="topic">C++ Development</div>
-                    <p>Building high-performance applications in C++.</p>
-                </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa-brands fa-css"></i></div>
+                        <div class="topic">CSS</div>
+                        <p>Responsive styling with Grid & Flexbox. Micro-interactions & polished animations.</p>
+                    </div>
 
-                <div class="box">
-                    <div class="icon"><i class="fab fa-python"></i></div>
-                    <div class="topic">Python Development</div>
-                    <p>Automation, AI integration, and backend systems in Python.</p>
-                </div>
+                    <div class="box">
+                        <div class="icon"><i class="fab fa-js"></i></div>
+                        <div class="topic">JavaScript</div>
+                        <p>Dynamic functionality and client-side interactions. Strong in ES6+ features.</p>
+                    </div>
 
-                <div class="box">
-                    <div class="icon"><i class="fa-solid fa-gamepad"></i></div>
-                    <div class="topic">Game Development</div>
-                    <p>Unity scripting, mechanics and build pipelines for small games.</p>
-                </div>
+                    <div class="box">
+                        <div class="icon"><i class="fab fa-php"></i></div>
+                        <div class="topic">PHP</div>
+                        <p>Server-side scripting for dynamic sites and form handling.</p>
 
-                <div class="box">
-                    <div class="icon"><i class="fa-solid fa-bug"></i></div>
-                    <div class="topic">Bug Fix & Optimization</div>
-                    <p>Find root causes, patch issues and keep releases stable.</p>
-                </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="devicon-cplusplus-plain"></i></div>
+                        <div class="topic">C++</div>
+                        <p>High-performance native apps. Systems programming and optimization focus.
+                        </p>
 
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="devicon-csharp-plain"></i></div>
+                        <div class="topic">C#</div>
+                        <p>Application and Unity game scripting. Gameplay logic & Physics.</p>
+
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fab fa-python"></i></div>
+                        <div class="topic">Python</div>
+                        <p>Scripting & automation. Backend services and prototype ML workflows.</p>
+
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="topic">Version Control</div>
+                        <p>Git workflows, branching strategies and PRs. Collaboration and release hygiene.</p>
+
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fab fa-github"></i></div>
+                        <div class="topic">GitHub</div>
+                        <p>Repository hosting, CI & pull-request workflows.</p>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects -->
-    <section class="projects" id="projects">
-        <div class="content">
-            <div class="title"><span>My Projects</span></div>
-            <div class="skills-details">
+        <!-- services -->
+        <section class="services" id="services">
+            <div class="content">
+                <div class="title"><span>My Services</span></div>
+                <div class="skills-details">
 
-                <div class="box">
-                    <div class="icon"><i class="fas fa-desktop"></i></div>
-                    <div class="topic">PortFolio Template</div>
-                    <p>Coming Soon...</p>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="topic">Web Development</div>
+                        <p>Build responsive, accessible websites with clean, production-ready HTML/CSS/JS.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="devicon-cplusplus-plain"></i></div>
+                        <div class="topic">C++ Development</div>
+                        <p>Building high-performance applications in C++.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fab fa-python"></i></div>
+                        <div class="topic">Python Development</div>
+                        <p>Automation, AI integration, and backend systems in Python.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-gamepad"></i></div>
+                        <div class="topic">Game Development</div>
+                        <p>Unity scripting, mechanics and build pipelines for small games.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-bug"></i></div>
+                        <div class="topic">Bug Fix & Optimization</div>
+                        <p>Find root causes, patch issues and keep releases stable.</p>
+                    </div>
+
                 </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fa-regular fa-comment-dots"></i></div>
-                    <div class="topic">CHATPRO</div>
-                    <p>Coming Soon...</p>
-                </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fa-solid fa-trophy"></i></div>
-                    <div class="topic">Indie Horror Game</div>
-                    <p>Coming Soon...</p>
-                </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fa-solid fa-circle-question"></i></div>
-                    <div class="topic">~</div>
-                    <p>Coming Soon...</p>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- footer -->
-    <footer id="foot">
-        <div class="footer-top container">
-            <div class="footer-left">
-                <h3>Contact Me</h3>
-                <p><a href="mailto:its.pirahsanraza@gmail.com">its.pirahsanraza@gmail.com</a></p>
-                <p><a href="tel:+923332816195">+92 333 2816195</a></p>
+        <!-- Projects -->
+        <section class="projects" id="projects">
+            <div class="content">
+                <div class="title"><span>My Projects</span></div>
+
+                <div class="projects-grid">
+
+                    <!-- my original portfolio -->
+                    <div class="project-card">
+                        <img src="img/p102.png" alt="Prostfolio" class="project-img">
+                        <div class="topic">Personal Portfolio</div>
+                        <p>My Portfolio Itself</p>
+                        <a href="https://github.com/pir-ahsan-raza/portfolio" class="project-btn" target="_blank"
+                            rel="noopener noreferrer">View Code</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/p101.png" alt="Frostfolio" class="project-img">
+                        <div class="topic">Portfolio Template</div>
+                        <p>Responsive portfolio built with HTML, CSS, and JavaScript.</p>
+                        <a href="https://github.com/pir-ahsan-raza/frostfolio" class="project-btn" target="_blank"
+                            rel="noopener noreferrer">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- footer -->
+        <footer id="foot">
+            <div class="footer-top container">
+                <div class="footer-left">
+                    <h3>Contact Me</h3>
+                    <p><a href="mailto:its.pirahsanraza@gmail.com">its.pirahsanraza@gmail.com</a></p>
+                    <p><a href="tel:+923332816195">+92 333 2816195</a></p>
+                </div>
+
+                <div class="footer-right">
+                    <a href="https://github.com/pir-ahsan-raza" class="social" target="_blank" title="GitHub"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pir-ahsan-raza" class="social" target="_blank" title="LinkedIn"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/Pir_Ahsan_Raza" class="social" target="_blank" title="X"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="footer-right">
-                <a href="https://github.com/pir-ahsan-raza" class="social" target="_blank" title="GitHub"
-                    rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/pir-ahsan-raza" class="social" target="_blank" title="LinkedIn"
-                    rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.freecodecamp.org/pir-ahsan-raza" class="social" target="_blank"
-                    title="freeCodeCamp" rel="noopener noreferrer">
-                    <i class="fab fa-free-code-camp"></i>
-                </a>
+            <div class="footer-bottom">
+                <div class="footer-note">FOR ALL TIME. ALWAYS. © 2025</div>
             </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="footer-note">FOR ALL TIME. ALWAYS. © 2025</div>
-        </div>
-    </footer>
+        </footer>
 </body>
 
 </html>
-
+</div>
