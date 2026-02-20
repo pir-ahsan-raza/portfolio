@@ -110,7 +110,7 @@ window.addEventListener("load", function () {
             if (scrollButton) scrollButton.style.display = "none";
           }
         },
-        { passive: true }
+        { passive: true },
       );
     })();
 
@@ -124,7 +124,7 @@ window.addEventListener("load", function () {
           const offset = window.scrollY * 0.05;
           document.body.style.setProperty("--grid-offset", `${offset}px`);
         },
-        { passive: true }
+        { passive: true },
       );
     })();
 
@@ -280,7 +280,7 @@ window.addEventListener("load", function () {
             document.body.classList.remove("sidebar-open");
             menuBtn.setAttribute("aria-expanded", "false");
           }
-        })
+        }),
       );
     })();
 
@@ -291,6 +291,57 @@ window.addEventListener("load", function () {
       $$(".menu li a").forEach((a) => {
         a.addEventListener("click", () => {
           navBar.classList.remove("active");
+        });
+      });
+    })();
+
+    /* =========================
+       SHOW MORE FUNCTIONALITY
+       ========================= */
+    (function initShowMore() {
+      const showMoreBtns = $$(".show-more-btn");
+      if (!showMoreBtns.length) return;
+
+      showMoreBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const target = this.getAttribute("data-target");
+          let section;
+
+          // Find the appropriate section
+          if (target === "skills") {
+            section = $(".skills .skills-details");
+          } else if (target === "services") {
+            section = $(".services .skills-details");
+          } else if (target === "qualifications") {
+            section = $(".qualifications .timeline");
+          }
+
+          if (!section) return;
+
+          // Toggle show-more-active class
+          if (section.classList.contains("show-more-active")) {
+            // Hide extra items
+            section.classList.remove("show-more-active");
+            this.textContent = "Show More";
+
+            // Scroll back to section title smoothly
+            const sectionElement = this.closest("section");
+            if (sectionElement) {
+              const navHeight = $("nav") ? $("nav").offsetHeight || 70 : 70;
+              const targetPos =
+                sectionElement.getBoundingClientRect().top +
+                window.scrollY -
+                (navHeight + 20);
+              window.scrollTo({
+                top: targetPos,
+                behavior: "smooth",
+              });
+            }
+          } else {
+            // Show extra items
+            section.classList.add("show-more-active");
+            this.textContent = "Show Less";
+          }
         });
       });
     })();
