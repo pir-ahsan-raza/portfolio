@@ -361,7 +361,7 @@ window.addEventListener("load", function () {
         const scrollPosition = window.scrollY;
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
-        
+
         // Find which section is currently active (closest to viewport center)
         const viewportCenter = scrollPosition + windowHeight / 2;
         let closestIndex = 0;
@@ -371,9 +371,9 @@ window.addEventListener("load", function () {
           const sectionTop = section.offsetTop;
           const sectionHeight = section.offsetHeight;
           const sectionCenter = sectionTop + sectionHeight / 2;
-          
+
           const distance = Math.abs(sectionCenter - viewportCenter);
-          
+
           if (distance < closestDistance) {
             closestDistance = distance;
             closestIndex = index;
@@ -384,16 +384,16 @@ window.addEventListener("load", function () {
         sections.forEach((section, index) => {
           if (index === closestIndex) {
             // Active section - fully visible
-            section.style.opacity = '1';
-            section.style.transform = 'scale(1) translateZ(0)';
-            section.style.pointerEvents = 'auto';
-            section.style.zIndex = '10';
+            section.style.opacity = "1";
+            section.style.transform = "scale(1) translateZ(0)";
+            section.style.pointerEvents = "auto";
+            section.style.zIndex = "10";
           } else {
             // Inactive sections - faded
-            section.style.opacity = '0.3';
-            section.style.transform = 'scale(0.97) translateZ(0)';
-            section.style.pointerEvents = 'none';
-            section.style.zIndex = '1';
+            section.style.opacity = "0.3";
+            section.style.transform = "scale(0.97) translateZ(0)";
+            section.style.pointerEvents = "none";
+            section.style.zIndex = "1";
           }
         });
 
@@ -402,21 +402,41 @@ window.addEventListener("load", function () {
 
       // Update on scroll with throttling
       let ticking = false;
-      window.addEventListener("scroll", () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            updateSections();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }, { passive: true });
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              updateSections();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        },
+        { passive: true },
+      );
 
       // Initial update
       updateSections();
-      
+
       // Update after short delay to ensure correct initial state
       setTimeout(updateSections, 100);
     })();
   });
 })();
+
+function openCert(src) {
+  document.getElementById("modalImg").src = src;
+  document.getElementById("certModal").classList.add("active");
+  document.body.style.overflow = "hidden"; // Prevent scrolling
+}
+
+function closeCert() {
+  document.getElementById("certModal").classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+// Close on Escape
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") closeCert();
+});

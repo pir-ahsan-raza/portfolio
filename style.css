@@ -1469,8 +1469,8 @@ body.sidebar-open .mobile-overlay {
 .show-more-container {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  width: 100%;
+  margin-top: 20px; /* or whatever spacing you want */
 }
 
 /* Show More Button Styling */
@@ -1554,4 +1554,99 @@ body.sidebar-open .mobile-overlay {
     opacity: 1;
     text-shadow: 0 0 20px rgba(255, 174, 66, 0.8);
   }
+}
+
+.timeline-content {
+  position: relative;
+}
+
+.cert-preview {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  width: 220px;
+  max-height: 160px;
+  background: #0d0d0d;
+  border: 2px solid #ffa500;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  z-index: 200;
+  transition: all 0.75s ease;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  overflow: hidden;
+}
+.cert-preview {
+  z-index: 9999 !important;
+  isolation: isolate;
+}
+
+.cert-preview::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #ffa500;
+}
+
+.cert-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.cert-preview img:hover {
+  transform: scale(1.05);
+}
+
+.timeline-content:hover .cert-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Fullscreen Modal */
+.cert-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.cert-modal.active {
+  display: flex;
+}
+
+.cert-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(255, 165, 0, 0.3);
+}
+
+.cert-modal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #ffa500;
+  font-size: 40px;
+  cursor: pointer;
 }

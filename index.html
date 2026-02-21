@@ -83,24 +83,21 @@
                 <div class="about-details">
 
                     <div class="just-c">
-                        <div class="topic text-one">Exploring code, AI, and creativity</div>
+                        <div class="topic text-one">Building intelligent systems through code and automation</div>
                         <p class="abt-text">
-                            I’m Pir Ahsan Raza, a software engineering student who loves diving into code and
-                            exploring the world of technology. Programming and AI fascinate me—not just the theory, but
-                            the
-                            endless possibilities of what can be created. Every new concept I learn pushes me to
-                            experiment,
-                            build, and figure things out by hand.<br><br>
-
-                            I enjoy taking on challenges, whether it’s solving problems in class projects or trying out
-                            tools I’ve never used before. My goal is to keep growing my skills and eventually turn the
-                            ideas
-                            in my head into projects that people can actually use.
+                            Currently studying software engineering, with most of my time spent in Python — writing
+                            automation scripts that eliminate repetitive work, training models that actually solve
+                            problems, and shipping code that scales. I learn by building: when I encounter a new
+                            algorithm or framework, my first move is implementation, not just theory.
+                            Recent projects span intelligent automation pipelines, ML model deployment, and tools that
+                            turn messy data into actionable systems. I'm particularly drawn to the overlap between
+                            robust engineering and intelligent systems — where clean code meets real decision-making.
+                            Always interested in collaborating on challenging technical problems, especially where
+                            automation and intelligence intersect.
                         </p>
 
-                        <!-- About CTA Button -->
                         <div class="about-btn-container">
-                            <a href="#projects" class="about-cta-btn">View My Work</a>
+                            <a href="res/PirAhsanRaza_Resume.pdf" class="about-cta-btn" download>My Resume</a>
                         </div>
                     </div>
                 </div>
@@ -110,23 +107,23 @@
         <!-- qualifications -->
         <section class="qualifications" id="qualifications">
             <div class="content">
-                <div class="title"><span>Qualification</span></div>
+                <div class="title"><span>Education & Certs</span></div>
                 <p class="qual-subtitle">A quick look at my education so far.</p>
                 <br><br>
 
                 <div class="timeline">
+                    <!-- slot 1 empty -->
                     <div class="timeline-empty"></div>
 
                     <div class="timeline-node">
                         <div class="branch branch-right" aria-hidden="true"></div>
                     </div>
-
+                    <!-- slot 2 -->
                     <div class="timeline-entry right">
                         <div class="timeline-content">
                             <span class="box-dot"><i class="fas fa-school"></i></span>
                             <h4 class="right-h4">Matriculation</h4>
                             <div class="timeline-date">2020</div>
-                            <p>Successfully completed Matriculation under BISE.</p>
                         </div>
                     </div>
 
@@ -135,7 +132,6 @@
                             <span class="box-dot"><i class="fas fa-book-open"></i></span>
                             <h4>Intermediate</h4>
                             <div class="timeline-date">2023</div>
-                            <p>Successfully completed Intermediate under BISE.</p>
                         </div>
                     </div>
 
@@ -159,14 +155,39 @@
                             <p>Currently pursuing a Software Engineering degree.</p>
                         </div>
                     </div>
-                    <div class="timeline-empty"></div>
-                </div>
 
-                <!-- Show More Button for Qualifications -->
-                <div class="show-more-container">
-                    <button class="show-more-btn" data-target="qualifications">
-                        Show More
-                    </button>
+                    <!-- <div class="timeline-empty"></div> -->
+                    <div class="timeline-entry left">
+                        <div class="timeline-content">
+                            <span class="box-dot"><i class="fas fa-certificate"></i></span>
+                            <h4>Forage Data Labeling Certification</h4>
+                            <div class="timeline-date">2026</div>
+                            <p>ML data preparation, annotation workflows.</p>
+                            <div class="cert-preview">
+                                <img src="cert/forage-dl.jpg" alt="forage data labeling cert"
+                                    onclick="openCert(this.src)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="branch branch-left" aria-hidden="true"></div>
+                    </div>
+                    <div class="timeline-empty"></div>
+                    <div class="timeline-empty"></div>
+                    <div class="timeline-node">
+                        <div class="branch branch-right" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="timeline-entry right">
+                        <div class="timeline-content">
+                            <span class="box-dot"><i class="fas fa-code"></i></span>
+                            <h4 class="right-h4">GeeksforGeeks Python Certification</h4>
+                            <div class="timeline-date">2026</div>
+                            <div class="cert-preview">
+                                <img src="cert/gfg-py.jpg" alt="GFG Python Certificate" onclick="openCert(this.src)">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -176,84 +197,94 @@
             <div class="content">
                 <div class="title"><span>My Skills</span></div>
                 <div class="skills-details">
-
+                    <!-- top skills -->
                     <div class="box">
-                        <div class="icon"><i class="fa-brands fa-html5"></i></div>
-                        <div class="topic">HTML</div>
-                        <p>Semantic, accessible markup for responsive layouts. SEO-friendly structure.</p>
+                        <div class="icon"><i class="fab fa-python"></i></div>
+                        <div class="topic">Python</div>
+                        <p>ML pipelines, automation scripting, data processing, backend APIs.</p>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-tags"></i></div>
+                        <div class="topic">Data Labeling & Annotation</div>
+                        <p>Forage certified, dataset preparation for ML training.</p>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-brain"></i></div>
+                        <div class="topic">AI/ML Integration</div>
+                        <p>Model training, scikit-learn, basic neural networks.</p>
                     </div>
 
                     <div class="box">
-                        <div class="icon"><i class="fa-brands fa-css"></i></div>
-                        <div class="topic">CSS</div>
-                        <p>Responsive styling with Grid & Flexbox. Micro-interactions & polished animations.</p>
+                        <div class="icon"><i class="fas fa-robot"></i></div>
+                        <div class="topic">Automation & Workflow</div>
+                        <p>n8n, CRM integrations. Eliminate busywork, scale operations.</p>
                     </div>
 
                     <div class="box">
-                        <div class="icon"><i class="fab fa-js"></i></div>
-                        <div class="topic">JavaScript</div>
-                        <p>Dynamic functionality and client-side interactions. Strong in ES6+ features.</p>
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="topic">Data Analytics</div>
+                        <p>Google Sheets, Excel automation. Dashboards that drive decisions.</p>
                     </div>
 
                     <div class="box">
-                        <div class="icon"><i class="fab fa-php"></i></div>
-                        <div class="topic">PHP</div>
-                        <p>Server-side scripting for dynamic sites and form handling.</p>
-
+                        <div class="icon"><i class="fas fa-database"></i></div>
+                        <div class="topic">SQL & Databases</div>
+                        <p>Data querying, SQLite/PostgreSQL.</p>
                     </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="topic">Version Control/Git</div>
+                        <p>Repository hosting, CI & pull-request workflows.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-draw-polygon"></i></div>
+                        <div class="topic">CVAT</div>
+                        <p>Computer Vision Annotation Tool. Image/video labeling for object detection.</p>
+                    </div>
+
                     <div class="box">
                         <div class="icon"><i class="devicon-cplusplus-plain"></i></div>
                         <div class="topic">C++</div>
                         <p>High-performance native apps. Systems programming and optimization focus.
                         </p>
-
                     </div>
-                    <div class="box">
+
+                    <div class="box hidden-box">
                         <div class="icon"><i class="devicon-csharp-plain"></i></div>
                         <div class="topic">C#</div>
                         <p>Application and Unity game scripting. Gameplay logic & Physics.</p>
-
                     </div>
 
                     <!-- Hidden boxes initially -->
-                    <div class="box">
-                        <div class="icon"><i class="fab fa-python"></i></div>
-                        <div class="topic">Python</div>
-                        <p>Scripting & automation. Backend services and prototype ML workflows.</p>
-
-                    </div>
-                    <div class="box">
-                        <div class="icon"><i class="fas fa-code-branch"></i></div>
-                        <div class="topic">Version Control</div>
-                        <p>Git workflows, branching strategies and PRs. Collaboration and release hygiene.</p>
-
-                    </div>
-                    <div class="box">
-                        <div class="icon"><i class="fab fa-github"></i></div>
-                        <div class="topic">GitHub</div>
-                        <p>Repository hosting, CI & pull-request workflows.</p>
-                    </div>
-
                     <div class="box hidden-box">
-                        <div class="icon"><i class="fab fa-github"></i></div>
-                        <div class="topic">Data Annotation</div>
-                        <p>Expert In Data Labeling with CVAT, LabelImg etc...</p>
+                        <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                        <div class="topic">HTML</div>
+                        <p>Semantic, accessible markup for responsive layouts. SEO-friendly structure.</p>
                     </div>
                     <div class="box hidden-box">
-                        <div class="icon"><i class="fab fa-github"></i></div>
-                        <div class="topic">n8n Automtion</div>
-                        <p>Automated Workflows, Complex and Business Level</p>
+                        <div class="icon"><i class="fa-brands fa-css"></i></div>
+                        <div class="topic">CSS</div>
+                        <p>Responsive styling with Grid & Flexbox. Micro-interactions & polished animations.</p>
                     </div>
-
+                    <div class="box hidden-box">
+                        <div class="icon"><i class="fab fa-js"></i></div>
+                        <div class="topic">JavaScript</div>
+                        <p>Dynamic functionality and client-side interactions. Strong in ES6+ features.</p>
+                    </div>
+                    <div class="box hidden-box">
+                        <div class="icon"><i class="fab fa-php"></i></div>
+                        <div class="topic">PHP</div>
+                        <p>Server-side scripting for dynamic sites and form handling.</p>
+                    </div>
                 </div>
-
                 <!-- Show More Button for Skills -->
                 <div class="show-more-container">
                     <button class="show-more-btn" data-target="skills">
                         Show More
                     </button>
                 </div>
-            </div>
         </section>
 
         <!-- services -->
@@ -263,36 +294,69 @@
                 <div class="skills-details">
 
                     <div class="box">
-                        <div class="icon">
-                            <i class="fa-solid fa-layer-group"></i>
-                        </div>
-                        <div class="topic">Web Development</div>
-                        <p>Build responsive, accessible websites with clean, production-ready HTML/CSS/JS.</p>
+                        <div class="icon"><i class="fab fa-python"></i></div>
+                        <div class="topic">Python Development</div>
+                        <p>ML pipelines, automation scripting, data processing, backend APIs.</p>
                     </div>
 
                     <div class="box">
-                        <div class="icon"><i class="devicon-cplusplus-plain"></i></div>
+                        <div class="icon"><i class="fas fa-brain"></i></div>
+                        <div class="topic">AI/ML Integration</div>
+                        <p>Model training, deployment, and intelligent system integration.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-tags"></i></div>
+                        <div class="topic">Data Annotation & Labeling</div>
+                        <p>CVAT, Label Studio. Dataset preparation for computer vision and NLP.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-robot"></i></div>
+                        <div class="topic">n8n Automation & AI Agents</div>
+                        <p>CRM integrations, workflow automation, custom AI agents and bots.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="topic">Data Analytics</div>
+                        <p>Google Sheets, Excel automation. Dashboards that drive decisions.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-bug"></i></div>
+                        <div class="topic">Bug Fix & Optimization</div>
+                        <p>Find root causes, patch issues and keep releases stable.</p>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-microchip"></i></div>
                         <div class="topic">C++ Development</div>
                         <p>Building high-performance applications in C++.</p>
                     </div>
 
                     <div class="box">
-                        <div class="icon"><i class="fab fa-python"></i></div>
-                        <div class="topic">Python Development</div>
-                        <p>Automation, AI integration, and backend systems in Python.</p>
-                    </div>
-
-                    <!-- Hidden boxes initially -->
-                    <div class="box">
-                        <div class="icon"><i class="fa-solid fa-gamepad"></i></div>
+                        <div class="icon"><i class="fas fa-gamepad"></i></div>
                         <div class="topic">Game Development</div>
                         <p>Unity scripting, mechanics and build pipelines for small games.</p>
                     </div>
 
                     <div class="box">
-                        <div class="icon"><i class="fa-solid fa-bug"></i></div>
-                        <div class="topic">Bug Fix & Optimization</div>
-                        <p>Find root causes, patch issues and keep releases stable.</p>
+                        <div class="icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="topic">Web Development</div>
+                        <p>Build responsive, accessible websites with clean, production-ready HTML/CSS/JS.</p>
+                    </div>
+
+                    <!-- Hidden boxes initially -->
+                    <div class="box hidden-box">
+                        <div class="icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="topic">Web Development</div>
+                        <p>Build responsive, accessible websites with clean, production-ready HTML/CSS/JS.</p>
+                    </div>
+                    <div class="box hidden-box">
+                        <div class="icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="topic">Web Development</div>
+                        <p>Build responsive, accessible websites with clean, production-ready HTML/CSS/JS.</p>
                     </div>
 
                 </div>
@@ -303,6 +367,8 @@
                         Show More
                     </button>
                 </div>
+
+
             </div>
         </section>
 
@@ -430,4 +496,8 @@
                 FOR ALL TIME. ALWAYS. 2025
             </div>
         </footer>
+        <div class="cert-modal" id="certModal" onclick="closeCert()">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="Certificate" id="modalImg">
+        </div>
 </body>
