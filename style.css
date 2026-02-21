@@ -88,16 +88,16 @@ html {
 section {
   /* Minimum height for better scroll experience */
   min-height: 100vh;
-  
+
   /* Smooth transitions - slower for more elegant fade */
-  transition: 
+  transition:
     opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     z-index 0s;
-  
+
   /* GPU acceleration for better performance */
   will-change: opacity, transform;
-  
+
   /* Ensure sections start at full visibility */
   opacity: 1;
   position: relative;
@@ -1529,5 +1529,29 @@ body.sidebar-open .mobile-overlay {
   .show-more-btn {
     padding: 0.7rem 2rem;
     font-size: 0.9rem;
+  }
+}
+
+.tva-motto {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: var(--amber);
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 174, 66, 0.5);
+  animation: tvaGlow 3s ease-in-out infinite;
+}
+
+@keyframes tvaGlow {
+  0%,
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(255, 174, 66, 0.5);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 20px rgba(255, 174, 66, 0.8);
   }
 }
