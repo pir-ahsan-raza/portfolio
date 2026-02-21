@@ -314,6 +314,8 @@ window.addEventListener("load", function () {
             section = $(".services .skills-details");
           } else if (target === "qualifications") {
             section = $(".qualifications .timeline");
+          } else if (target === "projects") {
+            section = $(".projects .projects-grid");
           }
 
           if (!section) return;
@@ -344,6 +346,77 @@ window.addEventListener("load", function () {
           }
         });
       });
+    })();
+
+    /* =========================
+       CLEAN SECTION TRANSITIONS
+       ========================= */
+    (function initSectionTransitions() {
+      const sections = $$("section");
+      if (!sections.length) return;
+
+      let currentSectionIndex = 0;
+
+      function updateSections() {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        
+        // Find which section is currently active (closest to viewport center)
+        const viewportCenter = scrollPosition + windowHeight / 2;
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+
+        sections.forEach((section, index) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionCenter = sectionTop + sectionHeight / 2;
+          
+          const distance = Math.abs(sectionCenter - viewportCenter);
+          
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = index;
+          }
+        });
+
+        // Apply styles to all sections
+        sections.forEach((section, index) => {
+          if (index === closestIndex) {
+            // Active section - fully visible
+            section.style.opacity = '1';
+            section.style.transform = 'scale(1) translateZ(0)';
+            section.style.pointerEvents = 'auto';
+            section.style.zIndex = '10';
+          } else {
+            // Inactive sections - faded
+            section.style.opacity = '0.3';
+            section.style.transform = 'scale(0.97) translateZ(0)';
+            section.style.pointerEvents = 'none';
+            section.style.zIndex = '1';
+          }
+        });
+
+        currentSectionIndex = closestIndex;
+      }
+
+      // Update on scroll with throttling
+      let ticking = false;
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateSections();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+
+      // Initial update
+      updateSections();
+      
+      // Update after short delay to ensure correct initial state
+      setTimeout(updateSections, 100);
     })();
   });
 })();
