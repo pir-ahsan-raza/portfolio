@@ -10,10 +10,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scroll-animation.css">
 </head>
 
 <body>
     <script src="script.js" defer></script>
+    <script src="scroll-animation.js" defer></script>
     <div id="loader">
         <div class="boot-text">Booting...</div>
         <div class="progress">
@@ -58,22 +60,34 @@
 
         <!-- home section -->
         <section class="home" id="home">
-            <div class="home-content">
-                <div class="left">
-                    <div class="text">
-                        <div class="text-one typewriter" data-text="Hi, I'm Pir Ahsan Raza" data-speed="70"></div>
-                        <div class="text-two typewriter" data-text="Software Engineer" data-speed="70"></div>
-                        <div class="text-three typewriter" data-text="Islamabad, Pakistan" data-speed="70"></div>
-                    </div>
+            <div id="canvas-container">
+                <canvas id="hero-lightpass"></canvas>
+                <div id="canvas-loader">
+                    <div id="canvas-progress-text">Loading 0%</div>
                 </div>
-                <div class="right">
-                    <div class="profile-wrapper">
-                        <img src="img/101NOBG.png" alt="" class="profile base">
-                        <img src="img/102-CRT.png" alt="" class="profile crt">
-                        <div class="scanline"></div>
+            </div>
+            <!-- the home section starts here-->
+            <div class="home-sticky-wrapper">
+                <div class="home-content">
+                    <div class="left">
+                        <div class="text">
+                            <div class="text-one typewriter" data-text="Hi, I'm Pir Ahsan Raza" data-speed="70">
+                            </div>
+                            <div class="text-two typewriter" data-text="Software Engineer" data-speed="70"></div>
+                            <div class="text-three typewriter" data-text="Islamabad, Pakistan" data-speed="70">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="profile-wrapper">
+                            <img src="img/101NOBG.png" alt="" class="profile base">
+                            <img src="img/102-CRT.png" alt="" class="profile crt">
+                            <div class="scanline"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- the home section ends here -->
         </section>
 
         <!-- about section -->
