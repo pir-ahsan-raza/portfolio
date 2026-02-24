@@ -1,8 +1,25 @@
-window.addEventListener("load", function () {
+// Centralized boot signal — resolves after 3s AND window.load
+window.bootReady = new Promise((resolve) => {
+  let loaded = false,
+    timerDone = false;
+  const tryResolve = () => {
+    if (loaded && timerDone) resolve();
+  };
+  window.addEventListener("load", () => {
+    loaded = true;
+    tryResolve();
+  });
   setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("main-content").style.display = "block";
+    timerDone = true;
+    tryResolve();
   }, 3000);
+});
+window.bootReady.then(() => {
+  document.getElementById("loader").style.display = "none";
+  const main = document.getElementById("main-content");
+  main.style.display = "block";
+  // Force reflow so the browser paints the main content
+  void main.offsetHeight;
 });
 
 (function () {
@@ -19,10 +36,13 @@ window.addEventListener("load", function () {
 
       if (!crt || !scan) return;
 
-      setTimeout(() => {
-        crt.classList.add("play");
-        scan.classList.add("play");
-      }, 120);
+      // Wait for boot to complete before starting CRT/scanline
+      window.bootReady.then(() => {
+        setTimeout(() => {
+          crt.classList.add("play");
+          scan.classList.add("play");
+        }, 120);
+      });
 
       crt.addEventListener("animationend", (e) => {
         if (e.animationName === "revealFollowScan") {
@@ -85,8 +105,8 @@ window.addEventListener("load", function () {
           });
         }
       }
-      //delay for till booting panel is gone!
-      setTimeout(next, 3000);
+      // Wait for boot to complete before starting typewriter
+      window.bootReady.then(next);
     })();
 
     /* =========================

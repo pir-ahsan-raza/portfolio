@@ -60,6 +60,12 @@ html {
   margin-top: 15px;
 }
 
+/* Pause ALL animations inside main-content while it is hidden during boot */
+#main-content[style*="display:none"] *,
+#main-content[style*="display: none"] * {
+  animation-play-state: paused !important;
+}
+
 /* ------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------ */
 

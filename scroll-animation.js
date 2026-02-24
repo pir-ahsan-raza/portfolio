@@ -189,8 +189,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Desktop: load frames and start animation loop
-    preloadImages();
+    // Desktop: defer frame downloads until boot completes
+    if (window.bootReady) {
+        window.bootReady.then(() => preloadImages());
+    } else {
+        preloadImages();
+    }
     setImageSize();
     requestAnimationFrame(updateImage);
 });
