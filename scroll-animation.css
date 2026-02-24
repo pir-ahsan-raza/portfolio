@@ -1,10 +1,6 @@
-/* Scroll Animation specific styles */
-
 #home {
     height: 300vh !important;
-    /* Force total scroll distance */
     padding: 0 !important;
-    /* Override the default section padding */
     position: relative;
     overflow: visible;
 }
@@ -27,9 +23,10 @@
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    opacity: 1;
-    will-change: opacity;
-    transition: opacity 0.1s ease;
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity, visibility;
+    transition: opacity 0.1s ease-in, visibility 0.1s;
 }
 
 #canvas-loader {
@@ -57,17 +54,87 @@
     top: 0;
     height: 100vh;
     padding: 70px 18px;
-    /* Restore the original #home padding */
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
     pointer-events: none;
-    /* Let clicks pass through if needed */
 }
 
-/* Mobile view (disable canvas, show normal home content) */
+/* glitch*/
+@keyframes crt-glitch {
+    0% {
+        transform: scale(1);
+        filter: brightness(1) contrast(1);
+    }
+
+    10% {
+        transform: scale(1.02) skewX(2deg);
+        filter: brightness(1.5) contrast(1.2) hue-rotate(90deg);
+        opacity: 0.8;
+    }
+
+    20% {
+        transform: scale(0.98) skewX(-2deg);
+        filter: brightness(0.5) contrast(2) invert(0.2);
+    }
+
+    30% {
+        transform: translateX(-10px) skewX(5deg);
+        filter: brightness(1.2);
+    }
+
+    40% {
+        transform: translateX(10px) skewX(-5deg);
+        filter: brightness(0.8) sepia(0.5);
+    }
+
+    50% {
+        transform: scale(1.05) translateY(-5px);
+        filter: brightness(2) contrast(1.5);
+        opacity: 0.5;
+    }
+
+    60% {
+        transform: scale(0.95) translateY(5px);
+        filter: brightness(0.3);
+    }
+
+    70% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+        transform: skewX(1deg);
+        opacity: 0.7;
+    }
+
+    80% {
+        text-shadow: none;
+        transform: scaleY(0.1);
+        filter: brightness(3) contrast(3);
+    }
+
+    90% {
+        transform: scaleY(0);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scaleY(0);
+        opacity: 0;
+        filter: brightness(0);
+    }
+}
+
+.glitching {
+    animation: crt-glitch 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    pointer-events: none;
+}
+
+.home-hidden-permanently {
+    display: none !important;
+}
+
+/* Mobile view (disable canvas, show normal home content, hide bg box) */
 @media (max-width: 767px) {
     #home {
         height: auto !important;
@@ -85,12 +152,55 @@
         /* Re-enable natural page flow */
         height: auto !important;
     }
+
+    /* glitch for mobile that doesn't shrink or disappear */
+    .glitching {
+        animation: mobile-crt-glitch 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+    }
+}
+
+@keyframes mobile-crt-glitch {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    20% {
+        transform: scale(1.02) skewX(2deg);
+        filter: brightness(1.5) hue-rotate(90deg);
+    }
+
+    40% {
+        transform: translateX(-5px) skewX(-2deg);
+        filter: brightness(0.8) invert(0.2);
+    }
+
+    60% {
+        transform: scale(0.98) translateY(2px);
+        filter: brightness(1.2) sepia(0.5);
+    }
+
+    80% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+        transform: skewX(1deg);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        filter: brightness(1);
+        text-shadow: none;
+    }
 }
 
 /* Desktop view (show canvas, hide duplicate home content) */
 @media (min-width: 768px) {
     .home-sticky-wrapper {
-        display: none !important;
-        /* Hide the text overlay on PC since it's baked into your background video */
+        margin-top: -100vh;
+    }
+
+    #hero-lightpass.visible {
+        opacity: 1;
+        visibility: visible;
     }
 }

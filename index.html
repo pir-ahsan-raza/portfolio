@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <script src="script.js" defer></script>
-    <script src="scroll-animation.js" defer></script>
+    <script src="script.js?v=2" defer></script>
+    <script src="scroll-animation.js?v=2" defer></script>
     <div id="loader">
         <div class="boot-text">Booting...</div>
         <div class="progress">
@@ -34,6 +34,7 @@
                 <ul class="menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+
                     <li><a href="#projects">Projects</a></li>
                     <li class="has-social">
                         <a href="#foot" class="nav-contact">Contact</a>
@@ -66,8 +67,11 @@
                     <div id="canvas-progress-text">Loading 0%</div>
                 </div>
             </div>
+
+
+
             <!-- the home section starts here-->
-            <div class="home-sticky-wrapper">
+            <div class=" home-sticky-wrapper">
                 <div class="home-content">
                     <div class="left">
                         <div class="text">
@@ -80,8 +84,8 @@
                     </div>
                     <div class="right">
                         <div class="profile-wrapper">
-                            <img src="img/101NOBG.png" alt="" class="profile base">
-                            <img src="img/102-CRT.png" alt="" class="profile crt">
+                            <img src="all-stuff/img/101NOBG.png" alt="" class="profile base">
+                            <img src="all-stuff/img/102-CRT.png" alt="" class="profile crt">
                             <div class="scanline"></div>
                         </div>
                     </div>
@@ -111,7 +115,7 @@
                         </p>
 
                         <div class="about-btn-container">
-                            <a href="res/PirAhsanRaza_Resume.pdf" class="about-cta-btn" download>My Resume</a>
+                            <a href="all-stuff/res/PirAhsanRaza_Resume.pdf" class="about-cta-btn" download>My Resume</a>
                         </div>
                     </div>
                 </div>
@@ -170,7 +174,7 @@
                         </div>
                     </div>
 
-                    <!-- <div class="timeline-empty"></div> -->
+
                     <div class="timeline-entry left">
                         <div class="timeline-content">
                             <span class="box-dot"><i class="fas fa-certificate"></i></span>
@@ -178,7 +182,7 @@
                             <div class="timeline-date">2026</div>
                             <p>ML data preparation, annotation workflows.</p>
                             <div class="cert-preview">
-                                <img src="cert/forage-dl.jpg" alt="forage data labeling cert"
+                                <img src="all-stuff/cert/forage-dl.jpg" alt="forage data labeling cert"
                                     onclick="openCert(this.src)">
                             </div>
                         </div>
@@ -198,7 +202,8 @@
                             <h4 class="right-h4">GeeksforGeeks Python Certification</h4>
                             <div class="timeline-date">2026</div>
                             <div class="cert-preview">
-                                <img src="cert/gfg-py.jpg" alt="GFG Python Certificate" onclick="openCert(this.src)">
+                                <img src="all-stuff/cert/gfg-py.jpg" alt="GFG Python Certificate"
+                                    onclick="openCert(this.src)">
                             </div>
                         </div>
                     </div>
@@ -386,6 +391,7 @@
             </div>
         </section>
 
+
         <!-- Projects -->
         <section class="projects" id="projects">
             <div class="content">
@@ -396,7 +402,7 @@
                     <!-- Project 1 - my original portfolio -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="img/p102.png" alt="Prostfolio" class="project-img">
+                            <img src="all-stuff/project-img/portfolio.png" alt="Prostfolio" class="project-img">
                         </div>
                         <div class="project-info">
                             <h3 class="topic">Personal Portfolio</h3>
@@ -418,7 +424,7 @@
                     <!-- Project 2 - Portfolio Template -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="img/p101.png" alt="Frostfolio" class="project-img">
+                            <img src="all-stuff/project-img/frostfolio.png" alt="Frostfolio" class="project-img">
                         </div>
                         <div class="project-info">
                             <h3 class="topic">Portfolio Template</h3>
@@ -431,7 +437,8 @@
                             <p class="project-description">Responsive portfolio built with HTML, CSS, and JavaScript.
                             </p>
                             <div class="project-links">
-                                <a href="" class="project-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+                                <a href="https://pir-ahsan-raza.github.io/frostfolio/" class="project-btn"
+                                    target="_blank" rel="noopener noreferrer">View Live</a>
                                 <a href="https://github.com/pir-ahsan-raza/frostfolio" class="project-btn"
                                     target="_blank" rel="noopener noreferrer">GitHub</a>
                             </div>
@@ -441,7 +448,7 @@
                     <!-- Project 3 - Shadowbound - Hidden initially -->
                     <div class="project-card hidden-box">
                         <div class="project-image">
-                            <img src="img/shdwbnd.png" alt="2D Indie Game" class="project-img">
+                            <img src="all-stuff/project-img/shdwbnd.png" alt="2D Indie Game" class="project-img">
                         </div>
                         <div class="project-info">
                             <h3 class="topic">Shadowbound</h3>
@@ -454,7 +461,8 @@
                             <p class="project-description">Silhouette-Style 2D Indie Project, Designed and Programmed in
                                 C# with Unity.</p>
                             <div class="project-links">
-                                <a href="" class="project-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+                                <a href="https://pir-ahsan-raza.itch.io/shadowbound" class="project-btn" target="_blank"
+                                    rel="noopener noreferrer">View Live</a>
                                 <a href="https://github.com/pir-ahsan-raza/shadowbound" class="project-btn"
                                     target="_blank" rel="noopener noreferrer">GitHub</a>
                             </div>

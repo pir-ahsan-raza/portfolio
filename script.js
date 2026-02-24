@@ -94,8 +94,6 @@ window.addEventListener("load", function () {
        ========================= */
     (function initStickyNav() {
       const nav = $("nav");
-      const scrollButton = $(".scroll-button a") || null;
-
       if (!nav) return;
 
       window.addEventListener(
@@ -104,10 +102,8 @@ window.addEventListener("load", function () {
           const scrolled = document.documentElement.scrollTop || window.scrollY;
           if (scrolled > 20) {
             nav.classList.add("sticky");
-            if (scrollButton) scrollButton.style.display = "block";
           } else {
             nav.classList.remove("sticky");
-            if (scrollButton) scrollButton.style.display = "none";
           }
         },
         { passive: true },
@@ -208,6 +204,7 @@ window.addEventListener("load", function () {
           <ul class="mobile-menu-list" role="menu">
             <li role="none"><a role="menuitem" href="#home">Home</a></li>
             <li role="none"><a role="menuitem" href="#about">About</a></li>
+
             <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
             <li role="none"><a role="menuitem" href="#foot">Contact</a></li>
           </ul>
@@ -273,7 +270,6 @@ window.addEventListener("load", function () {
         }
       });
 
-      // Also close
       $$(".menu a").forEach((a) =>
         a.addEventListener("click", () => {
           if (document.body.classList.contains("sidebar-open")) {
@@ -347,6 +343,8 @@ window.addEventListener("load", function () {
         });
       });
     })();
+
+
 
     /* =========================
        CLEAN SECTION TRANSITIONS
