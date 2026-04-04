@@ -4,7 +4,7 @@ A personal portfolio website with a retro-futuristic vibe, showcasing my skills,
 Built to demonstrate my work with HTML, CSS, and JavaScript, with a focus on responsive design and clean code.
 
 <img width="959" height="471" alt="Image" src="https://github.com/user-attachments/assets/5cb9a46f-8be2-4d52-bca5-760c8b5d2cd4" />
-![Image](https://github.com/user-attachments/assets/c4978e5e-3664-4e54-a462-20c04eadd837)
+[Image](https://github.com/user-attachments/assets/c4978e5e-3664-4e54-a462-20c04eadd837)
 <img width="2688" height="1536" alt="Image" src="https://github.com/user-attachments/assets/c364b811-a6a9-41e6-b943-18f5cf5925c8" />
 
 ## Features
