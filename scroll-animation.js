@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const isMobile = window.innerWidth < 768;
 
-    // Track if glitch sequence has started
+    // Track if glitch sequence has started.
     let hasGlitched = false;
 
     // ─── Glitch on first scroll (works on ALL viewports) ───
