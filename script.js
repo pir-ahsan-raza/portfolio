@@ -18,7 +18,7 @@ window.bootReady.then(() => {
   document.getElementById("loader").style.display = "none";
   const main = document.getElementById("main-content");
   main.style.display = "block";
-  // Force reflow so the browser paints the main content.
+  // Force reflow so the browser paints the main content
   void main.offsetHeight;
 });
 
