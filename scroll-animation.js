@@ -1,4 +1,3 @@
-// -
 document.addEventListener("DOMContentLoaded", () => {
     const homeSection = document.getElementById("home");
     const homeStickyWrapper = document.querySelector(".home-sticky-wrapper");
