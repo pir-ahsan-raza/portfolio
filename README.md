@@ -1,4 +1,4 @@
-# My Portfolio
+# My Portfolio 
 
 A personal portfolio website with a retro-futuristic vibe, showcasing my skills, projects, and experience as a software engineering student.  
 Built to demonstrate my work with HTML, CSS, and JavaScript, with a focus on responsive design and clean code.
