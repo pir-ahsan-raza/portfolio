@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const homeSection = document.getElementById("home");
     const homeStickyWrapper = document.querySelector(".home-sticky-wrapper");
     if (!homeSection || !homeStickyWrapper) return;
-
+ 
     const isMobile = window.innerWidth < 768;
 
     // Track if glitch sequence has started
