@@ -2,12 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const homeSection = document.getElementById("home");
     const homeStickyWrapper = document.querySelector(".home-sticky-wrapper");
     if (!homeSection || !homeStickyWrapper) return;
- 
     const isMobile = window.innerWidth < 768;
-
     // Track if glitch sequence has started
     let hasGlitched = false;
-
     // ─── Glitch on first scroll (works on ALL viewports) ───
     window.addEventListener("scroll", () => {
         if (window.scrollY > 10 && !hasGlitched) {
