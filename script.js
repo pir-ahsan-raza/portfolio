@@ -1,4 +1,4 @@
-// Centralized boot signal — resolves after 3s AND window.load
+// Centralized boot signal — resolves after 3s AND window.load.
 window.bootReady = new Promise((resolve) => {
   let loaded = false,
     timerDone = false;
