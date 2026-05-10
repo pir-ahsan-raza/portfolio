@@ -1,9 +1,14 @@
-// Centralized boot signal — resolves after 3s AND window.load.
+// Centralized boot signal — resolves after 3s, window.load, AND images completely rendered.
+window.imagesLoadedPromise = new Promise(resolve => {
+  window.resolveImagesLoaded = resolve;
+});
+
 window.bootReady = new Promise((resolve) => {
   let loaded = false,
-    timerDone = false;
+    timerDone = false,
+    imagesDone = false;
   const tryResolve = () => {
-    if (loaded && timerDone) resolve();
+    if (loaded && timerDone && imagesDone) resolve();
   };
   window.addEventListener("load", () => {
     loaded = true;
@@ -13,6 +18,10 @@ window.bootReady = new Promise((resolve) => {
     timerDone = true;
     tryResolve();
   }, 3000);
+  window.imagesLoadedPromise.then(() => {
+    imagesDone = true;
+    tryResolve();
+  });
 });
 window.bootReady.then(() => {
   document.getElementById("loader").style.display = "none";

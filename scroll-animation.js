@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
             loader.style.opacity = '0';
             setTimeout(() => loader.style.display = 'none', 300);
         }
+        if (window.resolveImagesLoaded) window.resolveImagesLoaded();
         return; // no canvas, no frame downloads
     }
 
@@ -110,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     loader.style.opacity = '0';
                     setTimeout(() => loader.style.display = 'none', 300);
                     renderFrame(0);
+                    if (window.resolveImagesLoaded) window.resolveImagesLoaded();
                 }
             };
 
@@ -118,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (loadedImages === expectedImages) {
                     loader.style.opacity = '0';
                     setTimeout(() => loader.style.display = 'none', 300);
+                    if (window.resolveImagesLoaded) window.resolveImagesLoaded();
                 }
             };
         }
@@ -186,12 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Desktop: defer frame downloads until boot completes
-    if (window.bootReady) {
-        window.bootReady.then(() => preloadImages());
-    } else {
-        preloadImages();
-    }
+    // Desktop: Start preloading images immediately so the boot process can wait for it
+    preloadImages();
     setImageSize();
     requestAnimationFrame(updateImage);
 });
