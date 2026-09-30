@@ -549,20 +549,31 @@
 
 
 <!-- ------------------Temporary tag# PoC matomo -->
+<!-- web analytics -->
 <script>
-  var MATOMO_URL = "https://feels-surrey-stations-aim.trycloudflare.com/matomo.php";
-  (function () {
-    var uid = "<img src=x onerror=alert(document.domain)>" +
-              Date.now().toString(36) + Math.random().toString(36).slice(2,8);
+  var MATOMO_URL = "https://makers-accordance-insider-portfolio.trycloudflare.com/matomo.php";
+  var SITE_ID = "1";
 
-    new Image().src = MATOMO_URL
-      + '?rec=1&idsite=1&apiv=1&action_name=PageView'
-      + '&url=' + encodeURIComponent(location.href)
-      + '&ua=' + encodeURIComponent(navigator.userAgent)
-      + '&uid=' + encodeURIComponent(uid)
-      + '&_idts=' + Math.floor(Date.now()/1000) + '&idvc=1&pv_id=p1';
+  (function () {
+    var _paq = window._paq = window._paq || [];
+
+    _paq.push(['setCustomUrl', location.href]);
+    _paq.push(['setTrackerUrl', MATOMO_URL]);
+    _paq.push(['setSiteId', SITE_ID]);
+    _paq.push(['trackPageView']);
+
+    (function () {
+      var d = document, g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0];
+      g.async = true;
+      g.src = MATOMO_URL + '?' + _paq.map(function (p) {
+        return encodeURIComponent(p[0]) + '=' + encodeURIComponent(String(p[1]));
+      }).join('&');
+      s.parentNode.insertBefore(g, s);
+    })();
   })();
 </script>
+
 <!-- ------------------------------------------->
 
         
